@@ -11,17 +11,19 @@ public class Jugador {
     @GeneratedValue
     private Long id;
     private String nombre;
-    private LocalDate fecha_nacimiento;
-    private Integer numCanasta;
+    private LocalDate fechaNacimiento;
+    private Integer numCanastas;
     private Integer numRebotes;
     private Integer numAsistencias;
     private String posicion;
 
+    public Jugador() {
+    }
 
-    public Jugador(String nombre, LocalDate fecha_nacimiento, Integer numCanasta, Integer numRebotes, Integer numAsistencias, String posicion) {
+    public Jugador(String nombre, LocalDate fechaNacimiento, Integer numCanastas, Integer numRebotes, Integer numAsistencias, String posicion) {
         this.nombre = nombre;
-        this.fecha_nacimiento = fecha_nacimiento;
-        this.numCanasta = numCanasta;
+        this.fechaNacimiento = fechaNacimiento;
+        this.numCanastas = numCanastas;
         this.numRebotes = numRebotes;
         this.numAsistencias = numAsistencias;
         this.posicion = posicion;
@@ -51,20 +53,20 @@ public class Jugador {
         this.numRebotes = numRebotes;
     }
 
-    public Integer getNumCanasta() {
-        return numCanasta;
+    public Integer getNumCanastas() {
+        return numCanastas;
     }
 
-    public void setNumCanasta(Integer numCanasta) {
-        this.numCanasta = numCanasta;
+    public void setNumCanastas(Integer numCanastas) {
+        this.numCanastas = numCanastas;
     }
 
-    public LocalDate getFecha_nacimiento() {
-        return fecha_nacimiento;
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getNombre() {
@@ -80,8 +82,8 @@ public class Jugador {
         return "Jugador{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
-                ", fecha_nacimiento=" + fecha_nacimiento +
-                ", numCanasta=" + numCanasta +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", numCanastas=" + numCanastas +
                 ", numRebotes=" + numRebotes +
                 ", numAsistencias=" + numAsistencias +
                 ", posicion='" + posicion + '\'' +
@@ -97,8 +99,8 @@ public class Jugador {
 
         if (!id.equals(jugador.id)) return false;
         if (!nombre.equals(jugador.nombre)) return false;
-        if (!fecha_nacimiento.equals(jugador.fecha_nacimiento)) return false;
-        if (!numCanasta.equals(jugador.numCanasta)) return false;
+        if (!fechaNacimiento.equals(jugador.fechaNacimiento)) return false;
+        if (!numCanastas.equals(jugador.numCanastas)) return false;
         if (!numRebotes.equals(jugador.numRebotes)) return false;
         if (!numAsistencias.equals(jugador.numAsistencias)) return false;
         return posicion.equals(jugador.posicion);
@@ -108,8 +110,8 @@ public class Jugador {
     public int hashCode() {
         int result = id.hashCode();
         result = 31 * result + nombre.hashCode();
-        result = 31 * result + fecha_nacimiento.hashCode();
-        result = 31 * result + numCanasta.hashCode();
+        result = 31 * result + fechaNacimiento.hashCode();
+        result = 31 * result + numCanastas.hashCode();
         result = 31 * result + numRebotes.hashCode();
         result = 31 * result + numAsistencias.hashCode();
         result = 31 * result + posicion.hashCode();
