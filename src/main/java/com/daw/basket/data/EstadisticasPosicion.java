@@ -20,7 +20,10 @@ public class EstadisticasPosicion {
         this.mediaAsistencias = mediaAsistencias;
     }
 
-    public EstadisticasPosicion(String posicion, Double mediaCanastas, Integer maxCanastas, Integer minCanastas, Double mediaAsistencias, Integer maxAsistencias, Integer minAsistencias, Double mediaRebotes, Integer maxRebotes, Integer minRebotes) {
+    public EstadisticasPosicion(String posicion, Double mediaCanastas, Integer maxCanastas,
+                                Integer minCanastas, Double mediaAsistencias,
+                                Integer maxAsistencias, Integer minAsistencias, Double mediaRebotes,
+                                Integer maxRebotes, Integer minRebotes) {
         this.posicion = posicion;
         this.mediaCanastas = mediaCanastas;
         this.maxCanastas = maxCanastas;
