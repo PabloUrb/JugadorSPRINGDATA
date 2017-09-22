@@ -22,11 +22,14 @@ public interface JugadorRepository extends JpaRepository<Jugador, Long>{
 
     @Query("select new com.daw.basket.data.EstadisticasPosicion (j.posicion, avg(j.numCanastas), avg(j.numAsistencias), avg(j.numRebotes)) " +
             "from Jugador j group by j.posicion")
-    List<EstadisticasPosicion> AvgCanastasAndAvgAndNumAsistenciasAndNumRebotesGroupBOrderByPosicion();
+    List<EstadisticasPosicion> Medias();
 
-    @Query("select new com.daw.basket.data.EstadisticasPosicion (j.posicion, avg(j.numCanastas), max(numCanastas), min(numCanastas), avg(j.numAsistencias), max(numAsistencias), min(numAsistencias), avg(j.numRebotes), max(numRebotes), min(numRebotes)) " +
-            "from Jugador j group by j.posicion")
-    List<EstadisticasPosicion> AvgCanastasAndMaxCanastasAndMinCanastasAndAvgNumAsistenciasAndMaxAsistenciasAndMinAsistenciasAndNumRebotesAndMaxRebotesAndMinRebotesGroupBOrderByPosicion();
+    @Query("select new com.daw.basket.data.EstadisticasPosicion " +
+            "(j.posicion, avg(j.numCanastas), max(j.numCanastas), min(j.numCanastas)," +
+            " avg(j.numAsistencias), max(j.numAsistencias), min(j.numAsistencias)," +
+            " avg(j.numRebotes), max(j.numRebotes), min(j.numRebotes)) " +
+            " from Jugador j group by j.posicion")
+    List<EstadisticasPosicion> EstadisticasCompletas();
 
 
 }

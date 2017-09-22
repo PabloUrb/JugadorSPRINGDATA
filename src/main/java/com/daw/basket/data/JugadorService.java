@@ -47,11 +47,11 @@ public class JugadorService {
             System.out.println("===============================================================================================================================================================================================================================================================================================================");
     //f
             System.out.println("");
-            System.out.println(jugadorRepository.AvgCanastasAndAvgAndNumAsistenciasAndNumRebotesGroupBOrderByPosicion());
+            System.out.println(jugadorRepository.Medias());
             System.out.println("===============================================================================================================================================================================================================================================================================================================");
     //g
             System.out.println("");
-            System.out.println(jugadorRepository.AvgCanastasAndMaxCanastasAndMinCanastasAndAvgNumAsistenciasAndMaxAsistenciasAndMinAsistenciasAndNumRebotesAndMaxRebotesAndMinRebotesGroupBOrderByPosicion());
+            System.out.println(jugadorRepository.EstadisticasCompletas());
             System.out.println("===============================================================================================================================================================================================================================================================================================================");
 
         }
