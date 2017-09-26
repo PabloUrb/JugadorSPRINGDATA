@@ -1,8 +1,7 @@
-package com.daw.basket.data;
+package entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -17,6 +16,8 @@ public class Jugador {
     private Integer numAsistencias;
     private String posicion;
 
+    @ManyToOne
+    private Equipo owner;
     public Jugador() {
     }
 
@@ -76,6 +77,8 @@ public class Jugador {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public Equipo getOwner() {return owner;}
 
     @Override
     public String toString() {

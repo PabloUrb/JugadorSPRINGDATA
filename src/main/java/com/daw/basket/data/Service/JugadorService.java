@@ -1,5 +1,7 @@
-package com.daw.basket.data;
+package com.daw.basket.data.Service;
 
+import entidades.Jugador;
+import com.daw.basket.data.Repository.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,7 @@ public class JugadorService {
         private JugadorRepository jugadorRepository;
 
 
-        public void testJugador(){
+        public static void testJugador(){
             Jugador Pablo = new Jugador("pablo", LocalDate.of(1998, 9, 16), 8,8,8, "base");
             jugadorRepository.save(Pablo);
             Jugador Pau = new Jugador("Pau", LocalDate.of(1996, 3, 8), 7,   7,7, "base");
@@ -25,6 +27,7 @@ public class JugadorService {
             jugadorRepository.save(Kelvin);
 
             Jugador saiden = new Jugador("saiden",LocalDate.of(1996,12,24),2,2,3,"base");
+            jugadorRepository.save(Barça);
             jugadorRepository.save(saiden);
             Jugador sergi = new Jugador("sergi", LocalDate.of(1996, 11, 21),3,0,2,"pivot");
             jugadorRepository.save(sergi);

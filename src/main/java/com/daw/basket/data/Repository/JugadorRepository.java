@@ -1,5 +1,6 @@
-package com.daw.basket.data;
-import com.daw.basket.data.Jugador;
+package com.daw.basket.data.Repository;
+import com.daw.basket.data.EstadisticasPosicion;
+import entidades.Jugador;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -30,6 +31,8 @@ public interface JugadorRepository extends JpaRepository<Jugador, Long>{
             " avg(j.numRebotes), max(j.numRebotes), min(j.numRebotes)) " +
             " from Jugador j group by j.posicion")
     List<EstadisticasPosicion> EstadisticasCompletas();
+
+    List<Jugador>findByEquipoNombre(String nombre);
 
 
 }
