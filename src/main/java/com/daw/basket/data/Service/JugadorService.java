@@ -30,11 +30,8 @@ public class JugadorService {
             jugadorRepository.save(Kelvin);
 
             Jugador saiden = new Jugador("saiden",LocalDate.of(1996,12,24),2,2,3,"base");
-
             Equipo barça = equipoRepository.findByNombre("Barça");
             saiden.setEquipo(barça);
-
-
             jugadorRepository.save(saiden);
             Jugador sergi = new Jugador("sergi", LocalDate.of(1996, 11, 21),3,0,2,"pivot");
             jugadorRepository.save(sergi);
