@@ -1,4 +1,4 @@
-package entidades;
+package com.daw.basket.data.entidades;
 
 import javax.persistence.*;
 
@@ -17,7 +17,7 @@ public class Jugador {
     private String posicion;
 
     @ManyToOne
-    private Equipo owner;
+    private Equipo equipo;
     public Jugador() {
     }
 
@@ -78,7 +78,7 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public Equipo getOwner() {return owner;}
+    public Equipo getEquipo() {return equipo;}
 
     @Override
     public String toString() {

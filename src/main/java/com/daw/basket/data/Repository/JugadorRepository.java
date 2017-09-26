@@ -1,6 +1,6 @@
 package com.daw.basket.data.Repository;
 import com.daw.basket.data.EstadisticasPosicion;
-import entidades.Jugador;
+import com.daw.basket.data.entidades.Jugador;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

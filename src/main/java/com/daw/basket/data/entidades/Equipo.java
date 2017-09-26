@@ -1,4 +1,4 @@
-package entidades;
+package com.daw.basket.data.entidades;
 
 
 import javax.persistence.Entity;
