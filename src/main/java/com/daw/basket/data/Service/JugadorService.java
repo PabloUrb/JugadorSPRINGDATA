@@ -1,5 +1,7 @@
 package com.daw.basket.data.Service;
 
+import com.daw.basket.data.Repository.EquipoRepository;
+import com.daw.basket.data.entidades.Equipo;
 import com.daw.basket.data.entidades.Jugador;
 import com.daw.basket.data.Repository.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,8 @@ public class JugadorService {
 
         @Autowired
         private JugadorRepository jugadorRepository;
-
+        @Autowired
+        private EquipoRepository equipoRepository;
 
         public  void testJugador(){
             Jugador Pablo = new Jugador("pablo", LocalDate.of(1998, 9, 16), 8,8,8, "base");
@@ -27,6 +30,10 @@ public class JugadorService {
             jugadorRepository.save(Kelvin);
 
             Jugador saiden = new Jugador("saiden",LocalDate.of(1996,12,24),2,2,3,"base");
+
+            Equipo barça = equipoRepository.findByNombre("Barça");
+            saiden.setEquipo(barça);
+
 
             jugadorRepository.save(saiden);
             Jugador sergi = new Jugador("sergi", LocalDate.of(1996, 11, 21),3,0,2,"pivot");

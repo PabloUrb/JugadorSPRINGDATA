@@ -80,6 +80,10 @@ public class Jugador {
 
     public Equipo getEquipo() {return equipo;}
 
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
+
     @Override
     public String toString() {
         return "Jugador{" +
