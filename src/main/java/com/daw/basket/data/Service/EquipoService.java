@@ -13,13 +13,28 @@ public class EquipoService {
     private EquipoRepository equipoRepository;
 
     public  void testEquipo(){
-        Equipo Barça =new Equipo("Barça","Barcelona",LocalDate.of(1998,8,11));
+        Equipo Barça = new Equipo("Barça","Barcelona",LocalDate.of(1998,8,11));
         equipoRepository.save(Barça);
+        Equipo Madrid = new Equipo("Madrid","Madrid",LocalDate.of(1998,8,11));
+        equipoRepository.save(Madrid);
+        Equipo Getafe = new Equipo("Getafe", "Getafe", LocalDate.of(1998,8,11));
+        equipoRepository.save(Getafe);
+        Equipo Atletico = new Equipo("Atletico", "Atletico", LocalDate.of(1998,11,11));
+        equipoRepository.save(Atletico);
+        Equipo Stucom = new Equipo("Stucom","Barcelona", LocalDate.of(1999, 11,11));
+        equipoRepository.save(Stucom);
 
         System.out.println("===============================================================================================================================================================================================================================================================================================================");
         System.out.println("Equipos de Barcelona");
         System.out.println(equipoRepository.findByLocalidadContaining("Barcelona"));
         System.out.println("===============================================================================================================================================================================================================================================================================================================");
+
+
+        System.out.println("===============================================================================================================================================================================================================================================================================================================");
+        System.out.println("Equipos");
+        System.out.println(equipoRepository.findByFecha(LocalDate.of(1998,8,11)));
+        System.out.println("===============================================================================================================================================================================================================================================================================================================");
+
 
     }
 
