@@ -13,4 +13,6 @@ public interface EquipoRepository extends JpaRepository<Equipo, Long> {
     List<Equipo> findByFecha(LocalDate fecha);
 
     Equipo findByNombre(String nombre);
+
+
 }

@@ -34,5 +34,7 @@ public interface JugadorRepository extends JpaRepository<Jugador, Long>{
 
     List<Jugador>findByEquipoNombre(String nombre);
 
+    List<Jugador>findByEquipoNombreAndPosicion(String nombre, String posicion);
 
+    Jugador findTopByEquipoNombreOrderByNumCanastasDesc(String nombre);
 }
